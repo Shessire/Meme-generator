@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
 export default function Main() {
 
@@ -7,6 +7,13 @@ export default function Main() {
         bottomText: "Walk into Mordor", 
         imageUrl: "http://i.imgflip.com/1bij.jpg"
     })
+    const [img, setImg] = useState([])
+
+    useEffect(() => {
+        fetch("https://api.imgflip.com/get_memes")
+            .then(res => res.json())
+            .then(data => setImg(data.data.memes))
+    }, [])
 
     function handleChange (e) {
         const { value, name } = e.target
