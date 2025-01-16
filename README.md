@@ -31,5 +31,6 @@ Link: https://meme-generator-rust-chi.vercel.app/
 1. The app fetches meme data from `https://api.imgflip.com/get_memes` when the page loads.
 2. Users can click a button to randomly select a meme template.
 3. The selected meme is displayed with default or custom text.
+4. Some memes may not be working with the template.
 
 ---
